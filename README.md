@@ -1,16 +1,4 @@
-<p align="center"><img width="300" src="/art/readme_logo.png" alt="Livewire Logo"></p>
 
-<p align="center">
-    <a href="https://packagist.org/packages/livewire/livewire">
-        <img src="https://poser.pugx.org/livewire/livewire/d/total.svg" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/livewire/livewire">
-        <img src="https://poser.pugx.org/livewire/livewire/v/stable.svg" alt="Latest Stable Version">
-    </a>
-    <a href="https://packagist.org/packages/livewire/livewire">
-        <img src="https://poser.pugx.org/livewire/livewire/license.svg" alt="License">
-    </a>
-</p>
 
 ## Introduction
 
