@@ -2,7 +2,17 @@
 
 ## Introduction
 
-Livewire is a full-stack framework for Laravel that allows you to build dynamic UI components without leaving PHP.
+This project belongs to the Advanced IA Module.
+It consists of building a deep learning module that classfies images using a Convolutional neural network (CNN)
+realised By :
+<ul>
+  <li>Abdennour Samaali
+</li>
+    <li>Azer LAHMAR</li>
+      <li>Mohamed Amine Kaabi</li>
+      <li>Yassine Layouni</li>
+</ul>
+
 
 ## Importations
 <a name="importations"></a>
