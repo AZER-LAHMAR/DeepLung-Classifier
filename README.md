@@ -63,7 +63,11 @@ For more you can read the official documentation on the [Keras](https://www.tens
 
 ## Data prepartion 💡
 <a name="data-prepartion"></a>
-
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
 #Split Dataset into 3 folders (train, test and validation)
 splitfolders.ratio('./3IDL_DataSet/', output="Output_DataSet", seed=1337, ratio=(0.6,0.2,0.2))
 # Set the path to your dataset directory
