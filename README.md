@@ -15,7 +15,7 @@ The dataset consists of 5228 lung images in PNG format with a size of 256x256 pi
 * NORMAL: 1802 images
 * PNEUMONIA: 1800 images
 </br>
-[Livewire website](https://livewire.laravel.com/docs).
+[here](.github/CONTRIBUTING.md).
 </br>
 
 
