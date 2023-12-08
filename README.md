@@ -2,7 +2,7 @@
 
 ## Introduction 📜
 
-This project belongs to the Advanced IA Module.</br></br>
+This project belongs to the Advanced AI Module and is part of the third-year engineering curriculum.</br></br>
 
 It consists of building a deep learning model for classifying lung images into three categories (COVID, NORMAL, PNEUMONIA) using a Convolutional neural network (CNN).</br>
 </br>
@@ -19,7 +19,7 @@ We will have a graphical interface from which we can test different images to de
       <li>Yassine Layouni</li>.</br>
 </ul>
 
-## Inputs 📥
+## Dataset 📥
 <a name="inputs"></a>
 The dataset consists of 5228 lung images in PNG format with a size of 256x256 pixels, divided into three categories:
 * COVID: 1626 images
@@ -63,6 +63,14 @@ For more you can read the official documentation on the [Keras](https://www.tens
 
 ## Data prepartion 💡
 <a name="data-prepartion"></a>
+
+Before building the Model We have to prepare the datasetsinto training, test, and validation sets.
+
+Preprocessing is needed for both the training and test sets, but it's important to avoid data leakage.
+The validation set is used to evaluate and fine-tune the model during training, helping to assess its performance and make adjustments.
+It's essential to split the data to prevent overfitting and ensure that the model generalizes well to new data
+
+
 ```
 #Split Dataset into 3 folders (train, test and validation)
 splitfolders.ratio('./3IDL_DataSet/', output="Output_DataSet", seed=1337, ratio=(0.6,0.2,0.2))
@@ -164,7 +172,8 @@ model.summary()
 
 ## Training the Model 💡
 <a name="training-the-model"></a>
-
+Training the model in deep learning is essential to enable it to learn from the data and make predictions. 
+During the training process, the model adjusts its internal parameters to minimize a loss function, which measures the difference between the predicted output and the actual output
 ```
 # Training the model using the fit method
 history = model.fit(train, steps_per_epoch=train.samples // batch_size,
@@ -183,6 +192,8 @@ plt.show()
 
 ## Saving the Model 💡
 <a name="saving-the-model"></a>
+Saving the model in deep learning is important to reuse the trained model for making predictions on new data without having to retrain the model from scratch.
+Saving the model allows us to share it with others
 ```
 # Save the model into (HDF5)
 model.save('lung_xray_classifier_model2.h5')
@@ -190,7 +201,7 @@ model.save('lung_xray_classifier_model2.h5')
 
 ## Testing the Model 💡
 <a name="testing-the-model"></a>
-
+A small example of prediction
 ```
 # Load a sample image from the testset for a prediction
 test_img = './Test/PNEUMONIA_899.png'
