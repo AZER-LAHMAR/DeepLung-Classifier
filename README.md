@@ -9,12 +9,12 @@ It consists of building a deep learning model for classifying lung images into t
 We will have a graphical interface from which we can test different images to determine the system's relevance.
 
 ## Authors ©️
-.</br>
+</br>
 <ul>
   <li>Abdennour Samaali
 </li>.</br>
     <li>Azer Lahmar</li>
-  .</br>
+</br>
       <li>Mohamed Amine Kaabi</li>.</br>
       <li>Yassine Layouni</li>.</br>
 </ul>
