@@ -196,7 +196,7 @@ Saving the model in deep learning is important to reuse the trained model for ma
 Saving the model allows us to share it with others
 ```
 # Save the model into (HDF5)
-model.save('lung_xray_classifier_model2.h5')
+model.save('classifier_model.h5')
 ```
 
 ## Testing the Model 💡
@@ -248,7 +248,7 @@ Our evaluation for our model consists of various metrics:
 
 ```
 # Load pre-trained model
-model = load_model('./lung_xray_classifier_model.h5')
+model = load_model('./classifier_model.h5')
 
 # Data rescaling
 test_data_generator = ImageDataGenerator(rescale=1./255)
