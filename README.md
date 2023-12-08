@@ -12,11 +12,11 @@ We will have a graphical interface from which we can test different images to de
 </br>
 <ul>
   <li>Abdennour Samaali
-</li>.</br>
+</li></br>
     <li>Azer Lahmar</li>
 </br>
-      <li>Mohamed Amine Kaabi</li>.</br>
-      <li>Yassine Layouni</li>.</br>
+      <li>Mohamed Amine Kaabi</li></br>
+      <li>Yassine Layouni</li></br>
 </ul>
 
 ## Dataset 📥
