@@ -10,13 +10,12 @@ We will have a graphical interface from which we can test different images to de
 
 ## Inputs 📥
 <a name="inputs"></a>
-the dataset consist of a 5228 256X256 PNG format lung images divided as follow: 
-
+The dataset consists of 5228 lung images in PNG format with a size of 256x256 pixels, divided into three categories:
 * COVID: 1626 images
 * NORMAL: 1802 images
 * PNEUMONIA: 1800 images
 </br>
-[Dataset]([https://livewire.laravel.com/docs](https://drive.google.com/drive/folders/1lccKwQH07i3S33KhOH6tEMrgTHe3cFtc?usp=drive_link)).
+[Dataset](https://drive.google.com/drive/folders/1lccKwQH07i3S33KhOH6tEMrgTHe3cFtc?usp=drive_link).
 ## Importations 💡
 <a name="importations"></a>
 You can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
