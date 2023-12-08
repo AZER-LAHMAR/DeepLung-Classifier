@@ -294,7 +294,7 @@ plt.show()
 # Print classification report
 print(classification_report(y_true, y_pred_classes, target_names=test_generator.class_indices.keys()))
 ```
-<img src="assets/Accuracy_Loss.png" alt="Accuracy and Loss" width="200"/>
+<img src="assets/Accuracy_Loss.png" alt="Accuracy and Loss" width="250"/>
 
 <img src="assets/Confusion Matrix.png" alt="Confusion Matrix" width="450"/>
 
