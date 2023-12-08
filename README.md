@@ -120,8 +120,42 @@ validation = test_data.flow_from_directory(
 ## Building the Model 💡
 <a name="building-the-model"></a>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by Laravel's [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+# Build the CNN model
+# Create a Sequential model
+model = Sequential()
+# Add the first convolutional layer with 32 filters and size 3x3
+model.add(Conv2D(32, (3, 3), input_shape=(img_dim, img_dim, 3), activation='relu'))
+# Add max pooling layer
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
+# Add the second convolutional layer with 64 filters and size 3x3
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+# Add the third convolutional layer with 128 filters and size 3x3
+model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+#Flatten the output from the previous layer into a one-dimensional array.
+model.add(Flatten())
+
+# Add a dense layer with 256 units and ReLU activation
+model.add(Dense(256, activation='relu'))
+
+# Add a dropout layer with a dropout rate of 0.5
+model.add(Dropout(0.5))
+
+# Add the output layer with 3 units (one unit per class) and softmax activation
+model.add(Dense(3, activation='softmax'))
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+#Display the model summary
+model.summary()
+
+```
 ## Training the Model 💡
 <a name="training-the-model"></a>
 
