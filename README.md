@@ -18,9 +18,18 @@ The dataset consists of 5228 lung images in PNG format with a size of 256x256 pi
 
 
 
-## Importations 💡
-<a name="importations"></a>
-You can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
+## Libraries  💡
+<a name="libraries "></a>
+📌Numpy
+For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
+
+📌Matplotlib
+For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
+
+📌Splitfolders
+For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
+📌Tensorflow (Keras)
+For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
 
 ## Data prepartion 💡
 <a name="data-prepartion"></a>
