@@ -294,11 +294,11 @@ plt.show()
 # Print classification report
 print(classification_report(y_true, y_pred_classes, target_names=test_generator.class_indices.keys()))
 ```
-<img src="assets/Accuracy_Loss.png" alt="Accuracy and Loss" width="300"/>
+<img src="assets/Accuracy_Loss.png" alt="Accuracy and Loss" width="500"/>
 
-<img src="assets/Confusion Matrix.png" alt="Confusion Matrix" width="300"/>
+<img src="assets/Confusion Matrix.png" alt="Confusion Matrix" width="500"/>
 
-<img src="assets/Classification Report.png" alt="Classification Report" width="300"/>
+<img src="assets/Classification Report.png" alt="Classification Report" width="500"/>
 
 
 ## Interface 💡
@@ -324,7 +324,7 @@ To lanch the interface execute this command :
 ```
 streamlit run Interface.py
 ```
-<img src="assets/Interface.png" alt="Classification Report" width="300"/>
+<img src="assets/Interface.png" alt="Classification Report" width="500"/>
 
 
 
