@@ -236,6 +236,94 @@ print(f"Predicted class: {predicted_class}")
 
 ## Model evaluation 💡
 <a name="model-evaluation"> </a>
+The evaluation of Convolutional Neural Networks (CNNs) plays a crucial role in assessing their performance and ensuring their effectiveness in image recognition.
+Our evaluation for our model consists of various metrics:
+1. Accuracy
+2. Loss
+3. Recall
+4. Precision
+5. Support
+6. f1-scores
+6. Confusion Matrix
 
-Yassine
+```
+# Load pre-trained model
+model = load_model('./lung_xray_classifier_model.h5')
+
+# Data rescaling
+test_data_generator = ImageDataGenerator(rescale=1./255)
+
+#  Testing data prepartion
+test_generator = test_data_generator.flow_from_directory(
+    os.path.join(path_dataset, 'test'),
+    target_size=(img_dim, img_dim),
+    batch_size=batch_size,
+    class_mode='categorical',
+    shuffle= False
+)
+
+evaluation = model.evaluate_generator(test_generator)
+
+# Print the evaluation results
+print("Loss:", evaluation[0])
+print("Accuracy:", evaluation[1])
+
+
+#Confution Matrix and Classification Report
+y_pred = model.predict_generator(test_generator)
+# Get predictions and true labels
+
+y_true = test_generator.classes
+
+# Convert probabilities to class labels
+y_pred_classes = np.argmax(y_pred, axis=1)
+
+# Compute confusion matrix
+conf_mat = confusion_matrix(y_true, y_pred_classes)
+
+# Plot confusion matrix as a heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_mat, annot=True, fmt='d', cmap='Blues', cbar=False,
+            xticklabels=test_generator.class_indices.keys(),
+            yticklabels=test_generator.class_indices.keys())
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.title('Confusion Matrix')
+plt.show()
+
+# Print classification report
+print(classification_report(y_true, y_pred_classes, target_names=test_generator.class_indices.keys()))
+```
+![Alt text](assets/Accuracy_Loss.png)
+
+![Alt text](<assets/Confusion Matrix.png>)
+
+![Alt text](<assets/Classification Report.png>)
+
+## Interface 💡
+<a name="interface"> </a>
+The interface is created using pthon library Streamlit, it allows the upload of a PNG image (Lungs), and returns the predicted class (Normal/COVID/Pneumonia)
+
+```
+if uploaded_file is not None:
+    # Display the uploaded image
+    st.image(uploaded_file, caption="Uploaded Image.", use_column_width=True)
+
+    # Save the uploaded image locally
+    save_button = st.button("Predict Image")
+    if save_button:
+        image = Image.open(uploaded_file)
+        img_path = "./UploadedImages/"+uploaded_file.name
+        image.save(img_path)
+        predicted_class, confidence = predict_img(img_path)
+        st.success("Classification : " + predicted_class + ", with a confidence of : " + confidence.astype(str) + "%")
+```
+
+To lanch the interface execute this command : 
+```
+streamlit run Interface.py
+```
+
+
+![Alt text](assets/Interface.png)
 
