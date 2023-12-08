@@ -71,11 +71,19 @@ path_dataset = './Output_DataSet'
 ```
 
 
-# Define parameters
+
+Define parameters
+
+```
 img_dim =256
 batch_size = 32
 
-# Data augmentation and training prepartion
+```
+
+
+Data augmentation and training prepartion
+
+```
 train_data = ImageDataGenerator(
     rescale=1./255,
     shear_range=0.2,
@@ -90,15 +98,25 @@ train = train_data.flow_from_directory(
     class_mode='categorical'
 )
 
-# Data rescaling
+```
+
+
+
+ Data rescaling
+```
 test_data = ImageDataGenerator(rescale=1./255)
 
-#  Validation data prepartion
+```
+
+Validation data prepartion
+```
 validation = test_data.flow_from_directory(
     os.path.join(path_dataset, 'val'),
     target_size=(img_dim, img_dim),
     batch_size=batch_size,
     class_mode='categorical'
+```
+
 ## Building the Model 💡
 <a name="building-the-model"></a>
 
