@@ -116,7 +116,7 @@ validation = test_data.flow_from_directory(
     batch_size=batch_size,
     class_mode='categorical'
 ```
-![386881675_732091871675069_6288602166843817305_n](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/b185dc1b-d730-4c1c-a028-fe5c6ae8994e)
+![x](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/8eaa4286-7edf-4a90-86c1-11c56d96600b)
 
 
 ## Building the Model 💡
@@ -159,15 +159,69 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 model.summary()
 
 ```
+![370090196_890019665867500_4440656610467536470_n](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/ee8727b6-303d-4779-a591-cd531fa61dea)
+
+
 ## Training the Model 💡
 <a name="training-the-model"></a>
 
-Please review [our security policy](https://github.com/livewire/livewire/security/policy) on how to report security vulnerabilities.
+```
+# Training the model using the fit method
+history = model.fit(train, steps_per_epoch=train.samples // batch_size,
+                    epochs=10,
+                    validation_data=validation,validation_steps=validation.samples // batch_size )
+
+# Plot training history per epochs (iteration)
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
+```
+![f](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/cb28dddf-01a2-4de9-8a0e-536496fc4f9f)
+
+## Saving the Model 💡
+<a name="saving-the-model"></a>
+```
+# Save the model into (HDF5)
+model.save('lung_xray_classifier_model2.h5')
+```
 
 ## Testing the Model 💡
 <a name="testing-the-model"></a>
 
-Livewire is open-sourced software licensed under the [MIT license](LICENSE.md).
+```
+# Load a sample image from the testset for a prediction
+test_img = './Test/PNEUMONIA_899.png'
+
+# Load the imag
+img = image.load_img(test_img, target_size=(256, 256))
+
+#Convert the image to a NumPy array
+img_array = image.img_to_array(img)
+
+# Expand the dimensions of the image
+img_array = np.expand_dims(img_array, axis=0)
+
+# Rescale the pixel values to be in the range [0, 1]
+img_array /= 255.0
+
+#Show the image
+plt.imshow(img)
+
+#Predict the image class
+predictions = model.predict(img_array)
+
+#  Class labels
+labels = ['COVID', 'Normal', 'Pneumonia']
+
+# Display the predicted class
+predicted_class = labels[np.argmax(predictions)]
+print(f"Predicted class: {predicted_class}")
+```
+![bn](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/f0278ae0-d1fc-46db-8bea-0abc5e9809bf)
+
 
 ## Model evaluation 💡
 <a name="model-evaluation"> </a>
