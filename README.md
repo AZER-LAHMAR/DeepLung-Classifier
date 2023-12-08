@@ -1,10 +1,12 @@
 
 
-## Introduction
+## Introduction 📜
 
-This project belongs to the Advanced IA Module.
-It consists of building a deep learning module that classfies images using a Convolutional neural network (CNN)
-realised By :
+This project belongs to the Advanced IA Module.</br>
+
+It consists of building a deep learning model for classifying lung images into three categories (COVID, NORMAL, PNEUMONIA) using a Convolutional neural network (CNN).</br> We will have a graphical interface from which we can test different images to determine the system's relevance.
+
+## Authors 📜
 <ul>
   <li>Abdennour Samaali
 </li>
@@ -12,7 +14,6 @@ realised By :
       <li>Mohamed Amine Kaabi</li>
       <li>Yassine Layouni</li>
 </ul>
-
 
 ## Importations
 <a name="importations"></a>
