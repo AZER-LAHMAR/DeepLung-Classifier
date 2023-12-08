@@ -201,7 +201,7 @@ model.save('lung_xray_classifier_model2.h5')
 
 ## Testing the Model 💡
 <a name="testing-the-model"></a>
-A small example of prediction
+A small example 
 ```
 # Load a sample image from the testset for a prediction
 test_img = './Test/PNEUMONIA_899.png'
