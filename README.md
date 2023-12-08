@@ -21,13 +21,24 @@ The dataset consists of 5228 lung images in PNG format with a size of 256x256 pi
 ## Libraries  💡
 <a name="libraries "></a>
 📌Numpy
+We used Numpy for manupliting the dimensions of the image
 For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
 
 📌Matplotlib
+We used Matplotlib for displaying the training history of the model and displaying the image itself.
+
 For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
 
 📌Splitfolders
+We used Splitfolders to  divide the dataset randomly into  randomly into 3 datasets: 
+📁training 
+
+📁Validation
+
+📁testing  
+
 For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
+
 📌Tensorflow (Keras)
 For more you can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
 
