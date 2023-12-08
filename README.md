@@ -116,16 +116,19 @@ validation = test_data.flow_from_directory(
     batch_size=batch_size,
     class_mode='categorical'
 ```
+![386881675_732091871675069_6288602166843817305_n](https://github.com/AZER-LAHMAR/DeepLung-Classifier/assets/56197313/b185dc1b-d730-4c1c-a028-fe5c6ae8994e)
+
 
 ## Building the Model 💡
 <a name="building-the-model"></a>
 
 ```
-# Build the CNN model
 # Create a Sequential model
 model = Sequential()
+
 # Add the first convolutional layer with 32 filters and size 3x3
 model.add(Conv2D(32, (3, 3), input_shape=(img_dim, img_dim, 3), activation='relu'))
+
 # Add max pooling layer
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
