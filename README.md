@@ -15,7 +15,7 @@ The dataset consists of 5228 lung images in PNG format with a size of 256x256 pi
 * NORMAL: 1802 images
 * PNEUMONIA: 1800 images
 </br>
-[Dataset]([.github/CONTRIBUTING.md](https://drive.google.com/drive/folders/1lccKwQH07i3S33KhOH6tEMrgTHe3cFtc?usp=drive_link)).
+[Dataset](https://drive.google.com/drive/folders/1lccKwQH07i3S33KhOH6tEMrgTHe3cFtc?usp=drive_link)).
 ## Importations 💡
 <a name="importations"></a>
 You can read the official documentation on the [Livewire website](https://livewire.laravel.com/docs).
