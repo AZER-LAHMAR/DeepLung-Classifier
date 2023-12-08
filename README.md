@@ -4,15 +4,19 @@
 
 This project belongs to the Advanced IA Module.</br>
 
-It consists of building a deep learning model for classifying lung images into three categories (COVID, NORMAL, PNEUMONIA) using a Convolutional neural network (CNN).</br> We will have a graphical interface from which we can test different images to determine the system's relevance.
+It consists of building a deep learning model for classifying lung images into three categories (COVID, NORMAL, PNEUMONIA) using a Convolutional neural network (CNN).</br>
+</br>
+We will have a graphical interface from which we can test different images to determine the system's relevance.
 
 ## Authors 📜
+.</br>
 <ul>
   <li>Abdennour Samaali
-</li>
+</li>.</br>
     <li>Azer LAHMAR</li>
-      <li>Mohamed Amine Kaabi</li>
-      <li>Yassine Layouni</li>
+  .</br>
+      <li>Mohamed Amine Kaabi</li>.</br>
+      <li>Yassine Layouni</li>.</br>
 </ul>
 
 ## Importations
