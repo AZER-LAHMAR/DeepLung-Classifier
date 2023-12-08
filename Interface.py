@@ -5,7 +5,7 @@ from keras.models import load_model
 from keras.preprocessing import image as im
 
 # Load your pre-trained model
-model = load_model('./lung_xray_classifier_model.h5')
+model = load_model('./classifier_model.h5')
 
 st.title("Deep Lung Classifier (Normal/Covid/Pneumonia)")
 
